@@ -7,15 +7,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = md5($conn->real_escape_string($_POST['password']));
 
     $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
-    $result = $conn->query($query);
+$result = $conn->query($query);
 
-    if ($result->num_rows == 1) {
-        $_SESSION['username'] = $username;
-        header("Location: index.php");
-        exit;
-    } else {
-        $error = "Invalid username or password.";
-    }
+if ($result->num_rows == 1) {
+    $user = $result->fetch_assoc();
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['role'] = $user['role'];
+    header("Location: index.php");
+    exit;
+} else {
+    $error = "Invalid username or password.";
+}
+
 }
 ?>
 

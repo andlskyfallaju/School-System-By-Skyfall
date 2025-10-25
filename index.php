@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 
 // Get total number of students
@@ -59,7 +60,13 @@ $popular_course = $popular_course_query->num_rows > 0 ? $popular_course_query->f
             <a href="index.php">Home</a>
             <a href="add_student.php">Add Student</a>
             <a href="view_students.php">View Students</a>
+           <?php
+    if (isset($_SESSION['username'])) {
+        echo '<a href="logout.php">Logout (' . $_SESSION['username'] . ')</a>';
+    }
+    ?>
         </div>
+
         
         <div class="home-section">
             <h2>Welcome to the School Management System</h2>
@@ -67,7 +74,7 @@ $popular_course = $popular_course_query->num_rows > 0 ? $popular_course_query->f
             
             <a href="add_student.php" class="btn">➕ Add New Student</a>
             <a href="view_students.php" class="btn">👥 View All Students</a>
-            <a href="logout.php" class="btn" style="color:red;">Logout</a>
+             <?php if ($_SESSION['role'] === 'admin') echo '<a href="add_user.php" class="btn">✔️ Add User</a>'; ?>
 
         </div>
 
