@@ -4,5 +4,5 @@ All rights reserved to the editor of the documents. Any uses, edits or distribut
 "add_student.php, auth_check.php, config.php, delete_student.php, edit_student.php, export_students.php, index.php, login.php, logout.php, style.css and view_student.php"
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Must be approved of by the owner/editor of the repository
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 For inquiries, email andile.makuyana@aju.ac.zw
