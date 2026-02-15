@@ -5,4 +5,13 @@ All rights reserved to the editor of the documents. Any uses, edits or distribut
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Must be approved of by the owner/editor of the repository
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 For inquiries, email andile.makuyana@aju.ac.zw
+
+***************************************************************************************************************************************************************************
+(25/10/2025)New patch adds extra features like a session manager, user roles (admin, student and staff). This patch only allows admins to delete student records and add new users
+Makes use of:
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+add_user.php, auth_check.php
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Future patch will make admin and staff roles the only ones allowed to add and edit student records

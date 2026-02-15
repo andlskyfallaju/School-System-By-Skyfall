@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form method="POST">
     <h2>Edit Student</h2>
     <label>ID:</label>
-    <input type="text" name="id" value="<?php echo $row['id']; ?>" required>
+    <input type="hidden" name="id" value="<?php echo $row['id']; ?>" required>
 
     <label>Name:</label>
     <input type="text" name="name" value="<?php echo $row['student_name']; ?>" required>
@@ -139,3 +139,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+

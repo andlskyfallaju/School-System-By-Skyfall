@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'config.php';
 ?>
 
@@ -99,7 +100,9 @@ include 'config.php';
                 echo "<td>" . date('M d, Y', strtotime($row['created_at'])) . "</td>";
                 echo "<td>";
                 echo '<a href="edit_student.php?id=' . $row['id'] . '" class="btn btn-primary">Edit</a>';
-                echo "<a href='#' class='delete-btn' onclick='confirmDelete(\"" . $row['id'] . "\", \"" . $row['student_name'] . "\")'>Delete</a>";
+                if ($_SESSION['role'] === 'admin') {
+                    echo "<a href='#' class='delete-btn' onclick='confirmDelete(\"" . $row['id'] . "\", \"" . $row['student_name'] . "\")'>Delete</a>";
+}
                 echo "</td>";
                 echo "</tr>";
             }
